@@ -9,22 +9,20 @@ const typeDefs = gql`
     "Fetch a specific module, provided a module's ID"
     module(id: ID!): Module!
   }
-
   type Mutation {
+    "Increment the number of views of a given track, when the track card is clicked"
     incrementTrackViews(id: ID!): IncrementTrackViewsResponse!
   }
-
   type IncrementTrackViewsResponse {
     "Similar to HTTP status code, represents the status of the mutation"
     code: Int!
     "Indicates whether the mutation was successful"
     success: Boolean!
-    "Human-readble message for the UI"
+    "Human-readable message for the UI"
     message: String!
     "Newly updated track after a successful mutation"
     track: Track
   }
-
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
     id: ID!
@@ -45,7 +43,6 @@ const typeDefs = gql`
     "The track's complete array of Modules"
     modules: [Module!]!
   }
-
   "Author of a complete Track or a Module"
   type Author {
     id: ID!
@@ -54,7 +51,6 @@ const typeDefs = gql`
     "Author's profile picture"
     photo: String
   }
-
   "A Module is a single unit of teaching. Multiple Modules compose a Track"
   type Module {
     id: ID!

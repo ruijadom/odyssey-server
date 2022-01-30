@@ -1,5 +1,5 @@
 {
-  "name": "catstronauts-server",
+  "name": "odyssey-server-catstrounauts",
   "version": "1.0.0",
   "description": "odyssey server",
   "main": "src/index.js",

@@ -4,7 +4,8 @@
   "description": "odyssey server",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index"
+    "start:dev": "nodemon src/index.js",
+    "start": "node src/index"
   },
   "dependencies": {
     "apollo-datasource-rest": "^0.11.0",
